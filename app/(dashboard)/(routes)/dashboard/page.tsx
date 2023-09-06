@@ -1,9 +1,11 @@
+import { UserButton } from "@clerk/nextjs";
 
     const DashboardPage = () =>{
   return (
-    <>
-    <p className='text-6xl'>Dashboard Page</p>
-    </>
+    <div>
+    <p className=''>Dashboard Page</p>
+    <UserButton afterSignOutUrl="/" />
+    </div>
   )
 }
 export default DashboardPage;

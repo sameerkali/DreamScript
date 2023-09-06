@@ -1,10 +1,19 @@
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const landingPage = () => {
   return (
-    <>
-    <p className='text-6xl'>Landing Page ( unprotected )</p>
-    </>
-  )
-}
-export default  landingPage;
+    <div>
+      Landing Page ( unprotected ) 
+      <div>
+        <Link href="/sign-in">
+        <Button>Login</Button>
+        </Link>
+        <Link href="/sign-up">
+        <Button>Register</Button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+export default landingPage;
