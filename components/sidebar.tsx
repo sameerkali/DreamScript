@@ -79,7 +79,7 @@ export const Sidebar = ({
             <Image fill alt="Logo" src="/logo.png" />
           </div>
           <h1 className={cn("text-2xl font-bold", poppins.className)}>
-            Genius
+            Dream Script
           </h1>
         </Link>
         <div className="space-y-1">
@@ -88,7 +88,10 @@ export const Sidebar = ({
               key={route.href}
               href={route.href}
               className={cn(
-                "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition"
+                "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition",
+                pathname === route.href
+                  ? "text-white bg-white/10"
+                  : "text-zinc-400"
               )}
             >
               <div className="flex items-center flex-1">
