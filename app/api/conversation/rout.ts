@@ -65,9 +65,9 @@
 
 
 
+import { Configuration, OpenAIApi } from "openai";
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
-import { Configuration, OpenAIApi } from "openai";
 
 
 const configuration = new Configuration({
