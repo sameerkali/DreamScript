@@ -21,7 +21,7 @@ export async function POST(req: Request) {
         status: 500
       });
     }
-
+// console.log("first hello")
     if (!messages) {
       return new NextResponse("Messages are required", { status: 400 });
     }

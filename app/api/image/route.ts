@@ -33,16 +33,12 @@ export async function POST(req: Request) {
       return new NextResponse("Resolution is required", { status: 400 });
     }
 
-    const response = await openai.createImage({
+    const response = await openai.images.generate({
       prompt,
       n: parseInt(amount, 10),
       size: resolution,
     });
-
-
-    console.log(chatCompletion.choices[0].message);
-
-    return NextResponse.json(response.data.data);
+    return NextResponse.json(response.data);
   } 
   
   catch (error) {
