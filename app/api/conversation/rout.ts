@@ -1,15 +1,10 @@
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
-// import { Configuration, OpenAIApi } from "openai";
 import OpenAI from 'openai';
 
 
-// const configuration = Configuration({
-//   apiKey: process.env.OPENAI_API_KEY
-// });
-
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY // This is also the default, can be omitted
+  apiKey: process.env.OPENAI_API_KEY 
 });
 
 export async function POST(req: Request) {
@@ -37,14 +32,9 @@ export async function POST(req: Request) {
     });
     console.log(chatCompletion.choices[0].message);
 
-
     return NextResponse.json(chatCompletion.choices[0].message);
 
-
-
   } 
-  
-  
   
   catch (error) {
     console.log('[CONVERSATION_ERROR]', error);
